@@ -2,13 +2,11 @@
 
 A complete scRNA-seq analysis workflow implemented in R using [Seurat](https://satijalab.org/seurat/), applied to a human brain organoid dataset (DS1). The pipeline covers everything from raw count matrix loading through quality control, dimensionality reduction, clustering, marker gene visualization, and cell type annotation. The original tutorial is present at [QuadBio](https://github.com/quadbio/scRNAseq_analysis_vignette)
 
----
 
 ## Overview
 
 This pipeline was used to analyze single-cell transcriptomic data and identify major brain cell populations including dorsal and ventral telencephalon progenitors, intermediate progenitors, and various neuronal subtypes spanning telencephalic and diencephalic/midbrain regions.
 
----
 
 ## Pipeline Steps
 
@@ -27,7 +25,6 @@ This pipeline was used to analyze single-cell transcriptomic data and identify m
 | **Trajectory subset** | Dorsal telencephalon subset (clusters 0, 2, 5, 6, 10) |
 | **Cell cycle scoring** | S/G2M scoring and regression for trajectory analysis |
 
----
 
 ## Key Results
 
@@ -54,7 +51,6 @@ Fifteen clusters were identified and annotated into the following cell types:
 | `NEUROD2`, `NEUROD6` | Dorsal excitatory neurons |
 | `LHX9` | Diencephalon/midbrain (clusters 4–5) |
 
----
 
 ## Requirements
 
@@ -65,7 +61,6 @@ library(patchwork)
 library(dplyr)
 ```
 
----
 
 ## Usage
 
@@ -101,7 +96,6 @@ seurat        <- readRDS("results/seurat_obj_all.rds")
 seurat_dorsal <- readRDS("results/seurat_obj_dorsal.rds")
 ```
 
----
 
 ## Output Figures
 
@@ -115,7 +109,6 @@ seurat_dorsal <- readRDS("results/seurat_obj_dorsal.rds")
 | NEUROD2 / NEUROD6 plots | FeaturePlot + VlnPlot |
 | LHX9 plots | FeaturePlot + VlnPlot |
 
----
 
 ## Notes
 
